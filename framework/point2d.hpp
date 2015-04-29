@@ -4,14 +4,16 @@
 class Point2d 
 {
 public:
-	Point2d(double x, double y);
-	~Point2d();
-	double x(double point_x) const;
-	double y(double point_y) const;
+    Point2d();
+    Point2d(double, double);
+    ~Point2d();
+    double x() const;
+    double y() const;
+    void translate(double, double);
 
 private:
-	double x_;
-	double y_;
+    double x_;
+    double y_;
 };
 
-#endif	
+#endif  
