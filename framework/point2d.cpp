@@ -28,11 +28,14 @@ void Point2d::translate(double dX, double dY) {
 }
 
 void Point2d::rotate(double rad) {
+  //multiply by rotation matrix
   x_ = x_*std::cos(rad) - x_*std::sin(rad);
   y_ = y_*std::sin(rad) + y_*std::cos(rad);
 }
 
-void Point2d::rotate(double rad, Point2d p0) {
+void Point2d::rotate(double rad, Point2d const& p0) {
+  //subtract rotation origin, multiply by rotation matrix, 
+  //  add rotation origin again
   x_ = (x_ - p0.x()) * std::cos(rad) - (x_ - p0.x()) * std::sin(rad) 
         + p0.x();
   y_ = (y_ - p0.y()) * std::sin(rad) + (y_ - p0.y()) * std::cos(rad)

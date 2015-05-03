@@ -11,11 +11,11 @@ public:
   double y() const;
   void translate(double, double);
   void rotate(double); //rotate around origin in radiants
-  void rotate(double, Point2d); //rotate around point
+  void rotate(double, Point2d const&); //rotate around point
 
 private:
   double x_;
   double y_;
 };
 
-#endif  
+#endif //BUW_POINT2D_HPP  
