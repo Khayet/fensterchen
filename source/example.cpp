@@ -11,9 +11,6 @@ int main(int argc, char* argv[])
     }
 
     auto t = win.getTime();
-    auto m = win.mousePosition();
-/*
-    auto t = win.getTime();
     float x1(0.5 + 0.5 * std::sin(t));
     float y1(0.5 + 0.5 * std::cos(t));
 
@@ -35,11 +32,7 @@ int main(int argc, char* argv[])
 
     win.drawLine(m.x, 0.0f, m.x, 0.01f, 0.0, 0.0, 0.0);
     win.drawLine(m.x, 0.99f,m.x, 1.0f, 0.0, 0.0, 0.0);
-*/
     
-    Rectangle rect{Point2d(300, 300), Point2d(500, 500)};
-    rect.draw(win);
-
     win.update();
   }
 
